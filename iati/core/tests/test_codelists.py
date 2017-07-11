@@ -108,7 +108,7 @@ class TestCodes(object):
         """Check a Code's default attributes are correct."""
         code = iati.core.Code()
 
-        assert code.name is None
+        assert code.name == ''
         assert code.value is None
 
     def test_code_value_instance(self):
@@ -116,7 +116,7 @@ class TestCodes(object):
         value_to_set = "test Code value"
         code = iati.core.Code(value_to_set)
 
-        assert code.name is None
+        assert code.name == ''
         assert code.value == value_to_set
 
     def test_code_value_and_name_instance(self):
